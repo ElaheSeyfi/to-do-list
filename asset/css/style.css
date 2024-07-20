@@ -1,0 +1,279 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Crimson Pro", serif;
+}
+.protifilo{
+    width: 150px;
+    height:150px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    >figure{
+        width: 100px;
+        height:100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      
+        &:hover>span{
+            &:nth-of-type(1){
+                animation: icon-one .4s linear 0s alternate  1 both ;
+            }
+            &:nth-of-type(2){
+                animation: icon-two .4s linear .6s alternate  1 both ;
+            }
+            &:nth-of-type(3){
+                animation: icon-three .6s linear .8s alternate  1 both ;
+            }
+        }
+        >img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        >span{
+            width: 40px;
+            height:40px;
+            position: absolute;
+            border: 1px solid yellowgreen;
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: -5;
+            &:after{
+                width: 80px;
+                height: 40px;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 40px;
+                background-color: transparent;
+                display: flex;
+
+            }
+            >a{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                text-decoration: none;
+                align-items: center;
+                justify-content: center;
+                >i{
+                    color:yellowgreen;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    >div{
+        width: 150px;
+        height:150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        filter: blur(5px);      
+
+        &:nth-of-type(1){
+            background-image: linear-gradient(315deg, rgb(151, 132, 24) 0%, #3a6144 74%);  
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+            animation-name: bg-one;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+        }
+        &:nth-of-type(2){
+            background-image: linear-gradient(326deg,  rgb(151, 132, 24) 0%, #3a6144   74%);
+            border-radius:55% 45% 58% 42% / 36% 68% 32% 64% ;
+            animation-name: bg-two;
+            animation-direction: alternate-reverse;
+            animation-duration: 2s;
+            animation-delay: 3s;
+        }
+        &:nth-of-type(3){
+            background-color: 6f7bf7;
+           border-radius: 51% 49% 54% 46% / 62% 64% 36% 38% ;
+            animation-name: bg-three;
+            animation-direction: alternate;
+            background-image: linear-gradient(326deg, rgb(151, 132, 24) 0%, #3a6144   74%);
+            animation-duration: 3s;
+            animation-delay: 4s;
+        }
+
+    }
+}
+section{
+    width:100%;
+    height:100vh;
+    background-color:gray;
+    display:flex;
+    justify-content:center;
+    background-image: url('../img/hobbit.jpg');
+    background-size: cover;
+    background-position: center;
+    align-items:center;
+    >.box{
+        width:400px;
+        min-height:400px;
+        background-color:#60744e;
+        border-radius: 10px;
+        overflow: hidden;
+        >h1{
+            color: #b99e57;
+            font-size: 60px;
+            display: flex;
+            display: flex;
+            justify-content: center;
+        }
+        >.container{
+            width: 100%;
+            
+            >.box_task{
+                width: 100%;
+                background-color: #49462f;
+                
+                >p{
+                    color:#b99e57;
+                    font-size: 28px;
+                }
+                >ul{
+                    >li{
+                        height: 70px;
+                        list-style-type: none;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        transition: 1s;
+                        color: #b99e57;
+                        >.myEdit{
+                            position: absolute;
+                            width: 200px;
+                            height: 100px;
+                            background-color: #60744e;
+                            border-radius: 5px;
+                            top: 50%;
+                            left: 50%;
+                            padding: 10px;
+                            transform: translate(-50%, -50%);      
+                            >input{
+                                width: 80%;
+                                height: 40px;
+                                border-radius: 10px;
+                                outline: none;
+                                border: none;
+                            }
+                             >.update{
+                                width: 100%;
+                                height: 20px;
+                                color: #b99e57;
+                                font-size: 20px;
+                                margin-top: 10px;
+                                cursor: pointer;
+                            } 
+                        }
+                    }
+                }
+                >.box_tasks{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    padding: 10px;
+                    >input{
+                        height: 40px;
+                        width: 100%;
+                        outline: none;
+                    }
+                    >.row{
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        >.btn{
+                            width: 100%;
+                            margin-top: 10px;
+                            padding: 10px;
+                            background-color: #b0966f;
+                            border-radius: 20px;
+                            outline: none;
+                            border: none;
+                            font-size: 20px;
+                            color: antiquewhite;
+                            cursor: pointer;
+                        }
+                    }
+                    >.state{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                        color: #b99e57;
+                        font-size: 22px;
+                        margin-top: 15px;
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+.licolor{
+    color: gray;
+}
+.myeditbox{
+    display: none;
+}
+.close{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+@keyframes bg-prof {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes bg-one{
+    to{
+        transform: rotate(50deg);
+    }
+  }
+  @keyframes bg-two{
+    to{
+        transform: rotate(100deg);
+    }
+  }
+  @keyframes bg-three{
+    to{
+        transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes icon-one{
+    to{
+        transform: translate(-150px, -75px); 
+    }
+  }
+  @keyframes icon-two{
+    to{
+        transform: translate(-150px ,-20px);
+    }
+  }
+  @keyframes icon-three{
+    to{
+        transform: translate(-150px ,36px);
+    }
+  }
